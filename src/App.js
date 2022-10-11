@@ -65,6 +65,17 @@ export default() => {
           <MovieRow key={key}  title={item.title} items={item.items}/>
         ))}
       </section>
+
+      <footer>
+        Direitos de imagem para Netflix<br/>
+        Dados retirados do site Themoviedb.org
+      </footer>
+        {MovieList.length <= 0 &&
+          <div className="loading">
+            <img src="https://64.media.tumblr.com/5bf8ba688ff3553b900a40dad2bbc1e0/tumblr_inline_pl93uu9rT41t9ij1a_1280.gifv" alt="Carregando" />
+          </div>
+        }
+
     </div>
   );
 }
